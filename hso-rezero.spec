@@ -19,14 +19,13 @@ rezero is a utility to disable the ZeroCD (fake USB CD-Rom)
 temporarily at run time for Option 3G cards.
 
 %prep
-rm -rf $RPM_BUILD_ROOT
-
 %setup -q -c
 
 %build
 %make 
 
 %install
+rm -rf $RPM_BUILD_ROOT
 %__make DESTDIR=%buildroot install
 mkdir -p $RPM_BUILD_ROOT/%_sbindir
 mkdir -p $RPM_BUILD_ROOT/%_sysconfdir/hal/fdi/policy/
