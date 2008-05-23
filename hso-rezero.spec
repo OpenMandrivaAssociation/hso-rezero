@@ -26,7 +26,7 @@ temporarily at run time for Option 3G cards.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%__make DESTDIR=%buildroot install
+%makeinstall_std
 mkdir -p $RPM_BUILD_ROOT/%_sbindir
 mkdir -p $RPM_BUILD_ROOT/%_sysconfdir/hal/fdi/policy/
 mkdir -p $RPM_BUILD_ROOT/%_sysconfdir/udev/rules.d/
