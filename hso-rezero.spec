@@ -3,7 +3,7 @@
 %define	version			0.1
 %define release			%mkrel 1
 
-Summary:		Udev Rules for 3G Card
+Summary:		Tools for Option 3G cards
 Name:			%{name}
 Version:		%{version}
 Release:		%{release}
@@ -15,7 +15,8 @@ BuildRoot:		%{_tmppath}/%{name}-buildroot
 License:		GPL
 
 %description
-Udev Rules for HSO 3G card 
+rezero is a utility to disable the ZeroCD (fake USB CD-Rom)
+temporarily at run time for Option 3G cards.
 
 %prep
 rm -rf $RPM_BUILD_ROOT
