@@ -44,4 +44,4 @@ rm -rf $RPM_BUILD_ROOT
 %files 
 %defattr(-,root,root,0755)
 %{_sbindir}/*
-%{_sysconfdir}/udev/rules.d/
+%{_sysconfdir}/udev/rules.d/*.rules
