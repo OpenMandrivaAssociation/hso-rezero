@@ -1,0 +1,45 @@
+%define	name			hso-udev
+%define	version			1
+%define release			%mkrel 1
+%define prefix			%{_prefix}
+
+Summary:		Udev Rules for 3G Card
+Name:			%{name}
+Version:		%{version}
+Release:		%{release}
+Source0:		%{name}-%{version}.tar.bz2
+Source2:		49_hso-udev.rules	
+URL:			http://www.pharscape.org/
+Packager:		Vincent Guardiola <vguardiola@mandrakesoft.com>
+Group:			System/Libraries
+BuildRoot:		%{_tmppath}/%{name}-buildroot
+License:		GPL
+
+%description
+Udev Rules for HSO 3G card 
+
+%prep
+rm -rf $RPM_BUILD_ROOT
+
+%setup  -q -n hso-udev-1
+
+%build
+%make 
+
+%install
+%__make DESTDIR=%buildroot install
+mkdir -p $RPM_BUILD_ROOT/%_sbindir
+mkdir -p $RPM_BUILD_ROOT/%_sysconfdir/hal/fdi/policy/
+mkdir -p $RPM_BUILD_ROOT/%_sysconfdir/udev/rules.d/
+install -m 644 %{SOURCE2} %buildroot/%_sysconfdir/udev/rules.d/
+
+
+
+#Cleaning la files for bad /home
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files 
+%defattr(-,root,root,0755)
+%{_sbindir}/*
+%{_sysconfdir}/udev/rules.d/
