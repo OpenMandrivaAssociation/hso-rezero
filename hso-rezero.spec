@@ -10,7 +10,7 @@ Release:		%{release}
 Source0:		%{oname}.tar.gz
 Source2:		49_hso-udev.rules	
 URL:			http://www.pharscape.org/
-Group:			System/Libraries
+Group:			System/Configuration/Hardware
 BuildRoot:		%{_tmppath}/%{name}-buildroot
 License:		GPL
 
