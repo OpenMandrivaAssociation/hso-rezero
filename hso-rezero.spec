@@ -1,5 +1,6 @@
-%define	name			hso-udev
-%define	version			1
+%define	name			hso-rezero
+%define oname			hso-udev
+%define	version			0.1
 %define release			%mkrel 1
 %define prefix			%{_prefix}
 
@@ -7,7 +8,7 @@ Summary:		Udev Rules for 3G Card
 Name:			%{name}
 Version:		%{version}
 Release:		%{release}
-Source0:		%{name}-%{version}.tar.bz2
+Source0:		%{oname}-1.tar.bz2
 Source2:		49_hso-udev.rules	
 URL:			http://www.pharscape.org/
 Packager:		Vincent Guardiola <vguardiola@mandrakesoft.com>
