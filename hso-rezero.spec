@@ -2,7 +2,6 @@
 %define oname			hso-udev
 %define	version			0.1
 %define release			%mkrel 1
-%define prefix			%{_prefix}
 
 Summary:		Udev Rules for 3G Card
 Name:			%{name}
