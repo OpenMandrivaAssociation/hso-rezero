@@ -8,7 +8,7 @@ Summary:		Udev Rules for 3G Card
 Name:			%{name}
 Version:		%{version}
 Release:		%{release}
-Source0:		%{oname}-1.tar.bz2
+Source0:		%{oname}.tar.gz
 Source2:		49_hso-udev.rules	
 URL:			http://www.pharscape.org/
 Packager:		Vincent Guardiola <vguardiola@mandrakesoft.com>
@@ -22,7 +22,7 @@ Udev Rules for HSO 3G card
 %prep
 rm -rf $RPM_BUILD_ROOT
 
-%setup  -q -n hso-udev-1
+%setup -q -c
 
 %build
 %make 
