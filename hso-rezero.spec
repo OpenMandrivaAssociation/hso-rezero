@@ -32,6 +32,7 @@ rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/%_sbindir
 mkdir -p $RPM_BUILD_ROOT/%_sysconfdir/hal/fdi/policy/
 mkdir -p $RPM_BUILD_ROOT/%_sysconfdir/udev/rules.d/
+rm -f %buildroot/%_sysconfdir/udev/rules.d/*.rules
 install -m 644 %{SOURCE2} %buildroot/%_sysconfdir/udev/rules.d/
 
 
