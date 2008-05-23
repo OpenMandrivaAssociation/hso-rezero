@@ -34,9 +34,6 @@ mkdir -p $RPM_BUILD_ROOT/%_sysconfdir/udev/rules.d/
 rm -f %buildroot/%_sysconfdir/udev/rules.d/*.rules
 install -m 644 %{SOURCE2} %buildroot/%_sysconfdir/udev/rules.d/
 
-
-
-#Cleaning la files for bad /home
 %clean
 rm -rf $RPM_BUILD_ROOT
 
