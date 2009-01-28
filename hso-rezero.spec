@@ -1,7 +1,7 @@
 %define	name			hso-rezero
 %define oname			hso-udev
 %define	version			0.1
-%define release			%mkrel 2
+%define release			%mkrel 3
 
 Summary:		Tools for Option 3G cards
 Name:			%{name}
@@ -21,6 +21,7 @@ temporarily at run time for Option 3G cards.
 
 %prep
 %setup -q -c
+make clean
 
 %build
 %make 
