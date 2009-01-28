@@ -26,16 +26,16 @@ temporarily at run time for Option 3G cards.
 %make 
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std
-mkdir -p $RPM_BUILD_ROOT/%_sbindir
-mkdir -p $RPM_BUILD_ROOT/%_sysconfdir/hal/fdi/policy/
-mkdir -p $RPM_BUILD_ROOT/%_sysconfdir/udev/rules.d/
+mkdir -p %{buildroot}/%_sbindir
+mkdir -p %{buildroot}/%_sysconfdir/hal/fdi/policy/
+mkdir -p %{buildroot}/%_sysconfdir/udev/rules.d/
 rm -f %buildroot/%_sysconfdir/udev/rules.d/*.rules
 install -m 644 %{SOURCE2} %buildroot/%_sysconfdir/udev/rules.d/
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files 
 %defattr(-,root,root,0755)
