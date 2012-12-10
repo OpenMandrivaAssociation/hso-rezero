@@ -1,0 +1,14 @@
+ACTION!="add", GOTO="hso_end"
+
+#SUBSYSTEMS=="scsi",ATTRS{vendor}=="ZCOPTION", RUN+="/sbin/modprobe sg"
+
+SUBSYSTEM!="usb", GOTO="hso_end"
+
+# send rezero command via usb_storage driver for all ZCOPTION devices
+SUBSYSTEMS=="usb", ATTRS{idProduct}=="6971", ATTRS{idVendor}=="0af0",KERNEL=="sg[0-9]*", RUN+="/usr/sbin/rezero /dev/%k"
+SUBSYSTEMS=="usb", ATTRS{idProduct}=="6911", ATTRS{idVendor}=="0af0",KERNEL=="sg[0-9]*", RUN+="/usr/sbin/rezero /dev/%k"
+SUBSYSTEMS=="usb", ATTRS{idProduct}=="1000", ATTRS{idVendor}=="05c6",KERNEL=="sg[0-9]*", RUN+="/usr/sbin/rezero /dev/%k"
+SUBSYSTEMS=="usb", ATTRS{idProduct}=="1003", ATTRS{idVendor}=="12d1",KERNEL=="sg[0-9]*", RUN+="/usr/sbin/rezero /dev/%k"
+SUBSYSTEMS=="usb", ATTRS{idProduct}=="1001", ATTRS{idVendor}=="12d1",KERNEL=="sg[0-9]*", RUN+="/usr/sbin/rezero /dev/%k"
+
+LABEL="hso_end"
