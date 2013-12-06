@@ -1,7 +1,8 @@
 %define	name			hso-rezero
 %define oname			hso-udev
 %define	version			0.1
-%define release			%mkrel 8
+%define release			9
+%define debug_package          %{nil}
 
 Summary:		Tools for Option 3G cards
 Name:			%{name}
