@@ -11,7 +11,7 @@ Release:		%{release}
 # http://www.pharscape.org/component/option,com_forum/Itemid,68/page,viewtopic/t,425/
 Source0:		%{oname}.tar.gz
 Source2:		49_hso-udev.rules
-URL:			http://www.pharscape.org/
+URL:			https://www.pharscape.org/
 Group:			System/Configuration/Hardware
 BuildRoot:		%{_tmppath}/%{name}-buildroot
 License:		GPL
