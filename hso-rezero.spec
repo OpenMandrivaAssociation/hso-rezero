@@ -16,6 +16,7 @@ Group:			System/Configuration/Hardware
 BuildRoot:		%{_tmppath}/%{name}-buildroot
 License:		GPL
 
+BuildRequires:	make
 %description
 rezero is a utility to disable the ZeroCD (fake USB CD-Rom)
 temporarily at run time for Option 3G cards.
